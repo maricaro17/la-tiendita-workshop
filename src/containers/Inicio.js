@@ -21,11 +21,11 @@ const Inicio = () => {
       <img src='https://i.imgur.com/mta2sIh.png' alt='logo' />
       <div>
       <h2>Ofertas</h2>            
-            <section class="ofertas" id="productOferta">
+            <section className="ofertas" id="productOferta">
               
             </section>            
             <h2>Los más populares</h2>
-            <section class="populares" id="productPopular">
+            <section classname="populares" id="productPopular">
             </section>
       </div>
     </main>
