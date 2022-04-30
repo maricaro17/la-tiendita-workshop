@@ -1,6 +1,9 @@
 import React from 'react'
+import "bootstrap/dist/css/bootstrap.css";
 import BtnCarrito from '../components/BtnCarrito'
 import '../styles/Styles.css'
+import Ubicacion from '../components/Ubicacion'
+
 
 const Inicio = () => {
   return (
@@ -8,9 +11,10 @@ const Inicio = () => {
       <div className='nabvar'>
         <span className="logo">Tiendita</span>
         <nav>
-          <ul>
-            <li><i class="Ubicacion"></i><span id="ubicación">Ubicación</span></li>
-            <li><BtnCarrito /></li>            
+          <ul> 
+        
+            <li><Ubicacion/>Ubicacion</li>
+            <li><BtnCarrito /></li>
           </ul>
         </nav>
       </div>
