@@ -1,0 +1,83 @@
+
+:root{
+    --white: #FEFEFE;
+    --malachine: #0AC763;
+    --silver: #BDBCBC;
+    --cocoa-brown: #332927;
+    --black: #333333;
+    --boulder: #B8B4B4;
+    --scarlet: #FF1F18;
+    --cobalt: #0252BC;
+    --bg: #FAFAF8;
+    --purple: #5E18BB;
+}
+
+.contenedor{
+    display:flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    width: 190px;
+    height: 72px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.03);
+    border-radius: 20px;
+    padding: 16px;
+}
+
+.btns{    
+    border-style: none;
+    height:40px;
+    width:40px;
+    background-color: var(--white);
+    background-position:center;
+    background-size: cover;
+}
+
+nav ul{
+    list-style: none;
+    cursor: pointer;
+}
+
+.Ubicacion{
+    color: var(--scarlet);
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+nav li{
+    text-transform: capitalize;
+    font-weight: bold;
+    display: inline;
+    padding: 0 3px;
+}
+
+.bnt-cart{
+    background-color: var(--malachine);
+    color: var(--white);
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    width: 5em;
+    height: auto;
+}
+.bnt-car:active{
+    background-color: var(--malachine);
+    opacity: 0.7;
+}
+
+.logo{    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: bold;
+    font-size: 22px;
+    color: var(--scarlet);
+    cursor: pointer;
+}
+
+.nabvar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+}
