@@ -13,7 +13,7 @@ const Inicio = () => {
         <nav>
           <ul> 
         
-            <li><Ubicacion/>Ubicacion</li>
+            <li className='Ubicacion'><Ubicacion/>Ubicacion</li>
             <li><BtnCarrito /></li>
           </ul>
         </nav>
@@ -22,6 +22,7 @@ const Inicio = () => {
       <div>
       <h2>Ofertas</h2>            
             <section class="ofertas" id="productOferta">
+              
             </section>            
             <h2>Los más populares</h2>
             <section class="populares" id="productPopular">
