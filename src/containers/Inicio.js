@@ -1,15 +1,21 @@
-import React from 'react'
+import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
+<<<<<<< HEAD
 import BtnCarrito from '../components/BtnCarrito'
 import '../styles/Styles.css'
 import Ubicacion from '../components/Ubicacion'
 import List from '../components/List';
+=======
+import BtnCarrito from "../components/BtnCarrito";
+import "../styles/Styles.css";
+import Ubicacion from "../components/Ubicacion";
+>>>>>>> main
 
 const Inicio = () => {
   
   return (
     <main>
-      <div className='nabvar'>
+      <div className="nabvar">
         <span className="logo">Tiendita</span>
         <nav>
           <ul>         
@@ -18,13 +24,12 @@ const Inicio = () => {
           </ul>
         </nav>
       </div>
-      <img src='https://i.imgur.com/mta2sIh.png' alt='logo' />
+      <img src="https://i.imgur.com/mta2sIh.png" alt="logo" />
       <div>
         <List/>
       </div>
     </main>
+  );
+};
 
-  )
-}
-
-export default Inicio
+export default Inicio;

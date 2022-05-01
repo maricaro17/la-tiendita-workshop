@@ -50,7 +50,7 @@ export default class Carrito extends Component {
                                         <tr key={carrito.id}>
                                             <td>
                                                 <td>{carrito.id}</td>
-                                                <td><img src={carrito.img} width="50px" height="70px" alt="" /></td>
+                                                <td><img src={carrito.img} width="40px" height="50px" alt="" /></td>
                                             </td>
                                             <td>{carrito.name}</td>
                                             <td>{carrito.Precio}</td>                                            
