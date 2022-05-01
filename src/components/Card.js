@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 export default class Cards extends Component {
     render() {
-        const { img, name, detalle, precio } = this.props.producto;
-        const id = this.key
+        const { id, img, name, detalle, precio } = this.props.fruta;
+        const key = this.key
         return (
             <div>
                 <Card style={{ width: '22rem' }}>
@@ -14,10 +14,7 @@ export default class Cards extends Component {
                         <Card.Title>{name}</Card.Title>
                         <Card.Text>{detalle}</Card.Text>
                         <div>$ {precio}/kg</div>
-                    </Card.Body>
-                    <Link to={`/detalle/${id}`}>
-                        <Button >Agregar</Button>
-                    </Link>
+                    </Card.Body>                    
                 </Card>
             </div>
         );

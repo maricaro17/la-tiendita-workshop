@@ -13,7 +13,7 @@ const Inicio = () => {
         <span className="logo">Tiendita</span>
         <nav>
           <ul>         
-            <li className='Ubicacion'><Ubicacion/>Ubicacion</li>
+            <li className='Ubicacion'><Ubicacion/></li>
             <li><BtnCarrito /></li>
           </ul>
         </nav>

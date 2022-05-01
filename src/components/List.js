@@ -26,7 +26,7 @@ export default class List extends Component {
             <div>
                 <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
                     {this.state.articulos.map((elem, index) => (
-                        <Cards producto={elem} key={index} />))}
+                        <Cards fruta={elem} key={index} />))}
                 </div>
             </div>
         );
