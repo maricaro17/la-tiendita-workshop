@@ -26,10 +26,10 @@ export default class Carrito extends Component {
                 contador == 0
                     ?
                     <div>
-                        <h1>El carrito esta vacio</h1>
+                        <h1>Tu canasta esta vacía</h1>
                         <img
-                            src=""
-                            alt=""
+                            src="https://i.imgur.com/Mw44uMw.png"
+                            alt="cartvacio"
                         />
                     </div>
                     :

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Card, Button } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 
 export default class Cards extends Component {
     render() {
@@ -14,7 +15,9 @@ export default class Cards extends Component {
                         <Card.Text>{detalle}</Card.Text>
                         <div>$ {precio}/kg</div>
                     </Card.Body>
-                    <Button onClick={console.log(id)}>Agregar</Button>
+                    <Link to={`/detalle/${id}`}>
+                        <Button >Agregar</Button>
+                    </Link>
                 </Card>
             </div>
         );
