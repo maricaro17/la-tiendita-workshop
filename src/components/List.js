@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from "react";
+import getData from "../helpers/getData";
 import { url } from "../helpers/url";
 import Card from "./Card";
-const getData = async () => {
-    const respuesta = await fetch(url);
-    const datos = await respuesta.json();
-    return datos;
-  };
+
 const List = () => {
   const [articulos, setArticulos] = useState([]);
   useEffect(() => {
     if (articulos.length === 0) {
-      getData().then((data) => {
+      getData(url).then((data) => {
         setArticulos(data);
       });
     }
