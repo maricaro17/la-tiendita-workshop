@@ -12,7 +12,7 @@ function AppRouters() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Inicio />}></Route>        
-        <Route path="/detalle/:productos/:id" element={<Detalle />}/>
+        <Route path="/detalle/:id" element={<Detalle />}/>
         <Route path="/pagar" element={<Pagar />}/>
         <Route path="/gracias" element={<Gracias />}/>
         <Route path="/cart" element={<Carrito />}/>
