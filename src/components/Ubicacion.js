@@ -24,10 +24,14 @@ const Ubicacion = () => {
   const [selectedOption, setSelectedOption] = useState(null);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const [location, setLocation] = useState("Ubicacion")
+  let locationStorage = localStorage.getItem("location")
+    ? JSON.parse(localStorage.getItem("location"))
+    : "Ubicacion";
+  const [location, setLocation] = useState(locationStorage);
   const handleChange = (e) => {
     setSelectedOption(e.value);
     setLocation(e.value);
+    localStorage.setItem("location", JSON.stringify(e.value));
   };
 
   return (
