@@ -1,34 +1,27 @@
-import React, { Component } from 'react'
-import { url } from '../helpers/url'
-import Cards from './Card'
+import React, { useEffect, useState } from "react";
+import { url } from "../helpers/url";
+import Card from "./Card";
+const getData = async () => {
+    const respuesta = await fetch(url);
+    const datos = await respuesta.json();
+    return datos;
+  };
+const List = () => {
+  const [articulos, setArticulos] = useState([]);
+  useEffect(() => {
+    if (articulos.length === 0) {
+      getData().then((data) => {
+        setArticulos(data);
+      });
+    }
+  }, [articulos]);
+  return (
+    <div>
+      <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+        <Card productos={articulos} />
+      </div>
+    </div>
+  );
+};
 
-export default class List extends Component {
-    constructor() {
-        super()
-        this.state = {
-            articulos: []
-        }
-    }
-    componentDidMount() {
-        this.getData()
-    }
-    getData = async () => {
-        const respuesta = await fetch(url)
-        const datos = await respuesta.json()
-        console.log(datos)
-
-        this.setState({
-            articulos: datos
-        })
-    }
-    render() {
-        return (
-            <div>
-                <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-                    {this.state.articulos.map((elem, index) => (
-                        <Cards producto={elem} key={index} />))}
-                </div>
-            </div>
-        );
-    }
-}
+export default List;
