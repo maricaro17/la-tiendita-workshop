@@ -1,22 +1,24 @@
-import React, { Component } from 'react'
-import { Card, Button } from "react-bootstrap";
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Card as CardBootstrap, Button } from "react-bootstrap";
 
-export default class Cards extends Component {
-    render() {
-        const { id, img, name, detalle, precio } = this.props.fruta;
-        const key = this.key
-        return (
-            <div>
-                <Card style={{ width: '22rem' }}>
-                    <Card.Img src={img} />
-                    <Card.Body>
-                        <Card.Title>{name}</Card.Title>
-                        <Card.Text>{detalle}</Card.Text>
-                        <div>$ {precio}/kg</div>
-                    </Card.Body>                    
-                </Card>
-            </div>
-        );
-    }
+
+const Card = ({productos}) => {
+  return (
+    <div>
+        {productos.map((elem) => (
+          <CardBootstrap key={elem.id} style={{ width: "14rem" }}>
+            <CardBootstrap.Img src={elem.img} />
+            <CardBootstrap.Body>
+              <CardBootstrap.Title>{elem.name}</CardBootstrap.Title>
+              <CardBootstrap.Text>{elem.detalle}</CardBootstrap.Text>
+              <div>$ {elem.precio}/kg</div>
+            </CardBootstrap.Body>
+            <Button >Agregar</Button>
+          </CardBootstrap>
+        ))}
+
+    </div>
+  )
 }
+
+export default Card
